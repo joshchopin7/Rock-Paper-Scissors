@@ -16,11 +16,11 @@ let scoreU = 0
 
 // function generateSelection() {
 //         if (numChoice <= 3) {
-//             return ('Rock!');
+//             return ('rock');
 //         } else if (numChoice > 3 && numChoice < 7) {
-//             return ('Paper!');
+//             return ('paper');
 //         } else {
-//             return ('Scissors!');
+//             return ('scissors');
 //         }
 //     }
 
@@ -33,23 +33,23 @@ let scoreU = 0
 function gamePlay() {
     if (yourChoice === itsChoice) {
         console.log('DRAW!!')
-    } else if(yourChoice == 'Rock!' &&
-                itsChoice == 'Scissors!') {
+    } else if(yourChoice == 'rock' &&
+                itsChoice == 'scissors') {
         console.log('YOU WIN!!');
-    } else if(yourChoice == 'Rock!' &&
-                itsChoice == 'Paper!') {
+    } else if(yourChoice == 'rock' &&
+                itsChoice == 'paper') {
         console.log('YOU LOSE!!');
-    } else if(yourChoice == 'Paper!' &&
-                itsChoice == 'Rock!') {
+    } else if(yourChoice == 'paper' &&
+                itsChoice == 'rock') {
         console.log('YOU WIN!!');
-    } else if(yourChoice == 'Paper!' &&
-                itsChoice == 'Scissors!') {
+    } else if(yourChoice == 'paper' &&
+                itsChoice == 'scissors') {
         console.log('YOU LOSE!!')
-    } else if(yourChoice == 'Scissors!' &&
-                itsChoice == 'Paper!') {
+    } else if(yourChoice == 'scissors' &&
+                itsChoice == 'paper') {
         console.log('YOU WIN!!')
-    } else if(yourChoice == 'Scissors!' &&
-                itsChoice == 'Rock!') {
+    } else if(yourChoice == 'scissors' &&
+                itsChoice == 'rock') {
         console.log('YOU LOSE!!')
     }
 
@@ -62,17 +62,19 @@ function gamePlay() {
 
 function game() {
     // yourChoice
-    let yourChoice = prompt("What do you choose??");
-    console.log(yourChoice);
+    let userInput = prompt("What do you choose??");
+    let yourChoice = userInput.toLowerCase()
+
+    console.log(yourChoice.toLowerCase());
     // itsChoice
     let numChoice = Math.floor(Math.random() * 10);
     function generateSelection() {
         if (numChoice <= 3) {
-            return ('Rock!');
+            return ('rock');
         } else if (numChoice > 3 && numChoice < 7) {
-            return ('Paper!');
+            return ('paper');
         } else {
-            return ('Scissors!');
+            return ('scissors');
         }
     }
     let itsChoice = generateSelection();
@@ -81,29 +83,29 @@ function game() {
     function gamePlay() {
         if (yourChoice === itsChoice) {
             console.log('DRAW!!');
-        } else if(yourChoice == 'Rock!' &&
-                    itsChoice == 'Scissors!') {
+        } else if(yourChoice == 'rock' &&
+                    itsChoice == 'scissors') {
             console.log('YOU WIN!!'); 
             // A WIN!
              scoreU = scoreU + 1;
-        } else if(yourChoice == 'Rock!' &&
-                    itsChoice == 'Paper!') {
+        } else if(yourChoice == 'rock' &&
+                    itsChoice == 'paper') {
             console.log('YOU LOSE!!');
-        } else if(yourChoice == 'Paper!' &&
-                    itsChoice == 'Rock!') {
+        } else if(yourChoice == 'paper' &&
+                    itsChoice == 'rock') {
             console.log('YOU WIN!!');
             // A WIN!
             scoreU = scoreU + 1;
-        } else if(yourChoice == 'Paper!' &&
-                    itsChoice == 'Scissors!') {
+        } else if(yourChoice == 'paper' &&
+                    itsChoice == 'scissors') {
             console.log('YOU LOSE!!')
-        } else if(yourChoice == 'Scissors!' &&
-                    itsChoice == 'Paper!') {
+        } else if(yourChoice == 'scissors' &&
+                    itsChoice == 'paper') {
             console.log('YOU WIN!!');
             // A WIN!
             scoreU = scoreU + 1;
-        } else if(yourChoice == 'Scissors!' &&
-                    itsChoice == 'Rock!') {
+        } else if(yourChoice == 'scissors' &&
+                    itsChoice == 'rock') {
             console.log('YOU LOSE!!')
         }
         console.log(scoreU);
