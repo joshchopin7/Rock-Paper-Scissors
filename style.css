@@ -9,12 +9,11 @@ body {
 .container {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
 
 }
 
 button {
-   font-size: 39px;
+   font-size: 36px;
    padding: 1.5em;
    border-radius: 15px;
 }
